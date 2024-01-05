@@ -4,7 +4,6 @@ const Properties = () => {
     return (
         <div className="wrapper">
 
-
         </div>
     )
 }
