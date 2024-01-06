@@ -1,50 +1,18 @@
-.App {
+.App{
   position: relative;
   overflow-x: clip;
-  background: white;
+  background-color: white;
 }
-.App > :nth-child(1) {
+.App>:nth-child(1)
+{
   background: var(--black);
   position: relative;
 }
-.white-gradient {
+.white-gradient{
   position: absolute;
   width: 20rem;
   height: 20rem;
   background: rgba(255, 255, 255, 0.522);
   filter: blur(100px);
   border-radius: 100px;
-}
-
-/* app.css */
-
-/* Styling for the Suspense fallback container */
-.SuspenseFallback {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust as needed */
-}
-
-/* Styling for the loading spinner */
-.SuspenseFallback div {
-  padding: 20px;
-  background-color: #fff; /* Background color for the loading spinner */
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
-}
-
-/* Animation for the fade-in effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Apply the animation to the loading spinner */
-.SuspenseFallback div {
-  animation: fadeIn 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }

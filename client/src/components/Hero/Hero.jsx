@@ -11,12 +11,12 @@ const Hero = () => {
           <div className="hero-title">
             <div className="orange-circle" />
             <motion.h1
-              initial={{ y: "2rem", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 2,
-                type: "ease-in",
-              }}
+            initial={{ y: "2rem", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
             >
               Discover <br />
               Most Suitable
@@ -27,7 +27,9 @@ const Hero = () => {
             <span>Find a variety of properties that suit you very easilty</span>
             <span>Forget all difficulties in finding a residence for you</span>
           </div>
-          <SearchBar />
+
+          <SearchBar/>
+
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
@@ -35,6 +37,7 @@ const Hero = () => {
               </span>
               <span className="secondaryText">Premium Product</span>
             </div>
+
             <div className="flexColCenter stat">
               <span>
                 <CountUp start={1950} end={2000} duration={4} /> <span>+</span>

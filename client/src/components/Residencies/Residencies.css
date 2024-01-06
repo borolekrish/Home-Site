@@ -4,66 +4,43 @@
   overflow: hidden;
 }
 
-.r-head {
+.r-head{
   margin-bottom: 2rem;
 }
 
-.swiper-horizontal {
+.swiper-horizontal{
   overflow: visible;
 }
-.r-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+.r-buttons{
   position: absolute;
+  gap: 1rem;
   top: -4rem;
   right: 0;
 }
-
-.r-buttons button {
+.r-buttons button{
   font-size: 1.2rem;
-  padding: 0.2rem 0.8rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 300ms ease-in;
+  padding: .2rem .8rem;
+  color: blue;
   border: none;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.r-buttons>:nth-child(1)
+{
+  background-color: #EEEEFF;
+}
+.r-buttons>:nth-child(2)
+{
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
 }
 
-.r-buttons button:hover {
-  scale: 1.1;
-  box-shadow: var(--shadow);
-}
-
-.r-buttons > button:nth-child(1) {
-  color: var(--blue);
-  transition: all 300ms ease-in;
-  background: var(--lightBlue);
-  font-weight: 600;
-}
-
-.r-buttons > button:nth-child(2) {
-  color: var(--blue);
-  transition: all 300ms ease-in;
-  background: var(--lightBlue);
-  font-weight: 600;
-}
-
-.r-buttons > button:nth-child(1):hover {
-  background: var(--blue);
-  color: white;
-}
-
-.r-buttons > button:nth-child(2):hover {
-  background: var(--blue);
-  color: white;
-}
 
 @media (max-width: 640px) {
-  .r-head {
-    align-items: center;
+  .r-head{
+  align-items: center;
   }
-  .r-buttons {
+  .r-buttons{
     position: initial;
   }
 }

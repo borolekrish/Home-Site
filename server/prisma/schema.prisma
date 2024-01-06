@@ -19,7 +19,7 @@ model User {
 
 model Residency {
     id          String   @id @default(auto()) @map("_id") @db.ObjectId
-    tittle      String?
+    title       String
     description String
     price       Int
     address     String
