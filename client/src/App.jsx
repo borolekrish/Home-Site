@@ -4,19 +4,28 @@ import Website from "./pages/Website";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Properties from "./pages/Properties/Properties";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ToastContainer } from "react-toastify";
+import { ReactQueryDevtools } from "react-query/devtools";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <BrowserRouter>
-      <Suspense fallback={<div className="SuspenseFallback">Loading...</div>}>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Website />} />
-            <Route path="/Properties" element={<Properties />} />
-          </Route>
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Suspense fallback={<div className="SuspenseFallback">Loading...</div>}>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Website />} />
+              <Route path="/Properties" element={<Properties />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+      <ToastContainer />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
